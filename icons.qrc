@@ -1,0 +1,13 @@
+<RCC>
+  <qresource prefix="images">
+    <file>icon/edit.png</file>
+    <file>icon/dexter.jpg</file>
+    <file>icon/add.png</file>
+    <file>icon/delete.png</file>
+    <file>icon/excel.png</file>
+    <file>icon/pdf.png</file>
+    <file>icon/print.png</file>
+    <file>icon/sync.png</file>
+    <file>icon/word.png</file>
+  </qresource>
+</RCC>

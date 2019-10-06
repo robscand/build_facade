@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1179</width>
+    <height>557</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>СтройФасад</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QTreeWidget" name="treeWidget">
+      <property name="maximumSize">
+       <size>
+        <width>350</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectItems</enum>
+      </property>
+      <attribute name="headerVisible">
+       <bool>false</bool>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>Документация</string>
+       </property>
+      </column>
+      <item>
+       <property name="text">
+        <string>Входные документы</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Программа строительства на год</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Ведомость объемов СМР на объект</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>План подготовки производства СМР на объект</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Сводная недельная заявка на доставку бетона и раствора</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Почасовая заявка на доставку бетона и раствора</string>
+        </property>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string>Справочники</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Справочник материальных ресурсов</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Справочник трудовых ресурсов</string>
+        </property>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string>Выходные документы</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>График производства СМР на объект</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Ведомость потребности в материалах на объект</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Ведомость потребности в трудовых ресурсах на объект</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Суточный график поставки бетона и раствора на объект</string>
+        </property>
+       </item>
+      </item>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QTableWidget" name="tableWidget">
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QPushButton" name="openButton">
+      <property name="maximumSize">
+       <size>
+        <width>400</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Открыть выбранный документ</string>
+      </property>
+      <property name="autoExclusive">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1179</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="file">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="saveWord"/>
+    <addaction name="saveExcel"/>
+    <addaction name="savePDF"/>
+    <addaction name="print"/>
+    <addaction name="separator"/>
+    <addaction name="act_db"/>
+    <addaction name="separator"/>
+    <addaction name="exit"/>
+   </widget>
+   <widget class="QMenu" name="edit">
+    <property name="title">
+     <string>Правка</string>
+    </property>
+    <addaction name="refresh"/>
+    <addaction name="act_edit"/>
+    <addaction name="add"/>
+    <addaction name="act_del"/>
+   </widget>
+   <widget class="QMenu" name="help">
+    <property name="title">
+     <string>Справка</string>
+    </property>
+    <addaction name="about_action"/>
+   </widget>
+   <addaction name="file"/>
+   <addaction name="edit"/>
+   <addaction name="help"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="print"/>
+   <addaction name="saveWord"/>
+   <addaction name="saveExcel"/>
+   <addaction name="savePDF"/>
+   <addaction name="separator"/>
+   <addaction name="refresh"/>
+   <addaction name="act_edit"/>
+   <addaction name="add"/>
+   <addaction name="act_del"/>
+  </widget>
+  <action name="add">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/images/icon/add.png</normaloff>:/images/icon/add.png</iconset>
+   </property>
+   <property name="text">
+    <string>Добавить</string>
+   </property>
+  </action>
+  <action name="act_del">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/images/icon/delete.png</normaloff>:/images/icon/delete.png</iconset>
+   </property>
+   <property name="text">
+    <string>Удалить</string>
+   </property>
+  </action>
+  <action name="saveWord">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/images/icon/word.png</normaloff>:/images/icon/word.png</iconset>
+   </property>
+   <property name="text">
+    <string>Сохранить Word</string>
+   </property>
+  </action>
+  <action name="saveExcel">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/images/icon/excel.png</normaloff>:/images/icon/excel.png</iconset>
+   </property>
+   <property name="text">
+    <string>Сохранить Excel</string>
+   </property>
+  </action>
+  <action name="savePDF">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/images/icon/pdf.png</normaloff>:/images/icon/pdf.png</iconset>
+   </property>
+   <property name="text">
+    <string>Сохранить PDF</string>
+   </property>
+  </action>
+  <action name="print">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/images/icon/print.png</normaloff>:/images/icon/print.png</iconset>
+   </property>
+   <property name="text">
+    <string>Печать</string>
+   </property>
+  </action>
+  <action name="exit">
+   <property name="text">
+    <string>Выход</string>
+   </property>
+  </action>
+  <action name="about_action">
+   <property name="text">
+    <string>О программе</string>
+   </property>
+  </action>
+  <action name="refresh">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/images/icon/sync.png</normaloff>:/images/icon/sync.png</iconset>
+   </property>
+   <property name="text">
+    <string>Обновить</string>
+   </property>
+  </action>
+  <action name="act_edit">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/images/icon/edit.png</normaloff>:/images/icon/edit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Редактировать</string>
+   </property>
+  </action>
+  <action name="act_db">
+   <property name="text">
+    <string>Подключение к БД</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>exit</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>460</x>
+     <y>296</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
